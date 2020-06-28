@@ -9,5 +9,6 @@ mkdir -p data
 mkdir -p data/images_test
 mkdir -p data/images_seg_test
 
+cd segnet
 python3 preprocess.py
-python3 segnet/main.py
+python3 main.py
