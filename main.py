@@ -53,9 +53,9 @@ class Dataset(torch.utils.data.Dataset):
 
         self.examples = []
 
-        file_names = glob.glob('../data/images/*jpg')
+        file_names = glob.glob('../data/images_test/*jpg')
         for idx in range(len(file_names)):
-            file_name = '../data/images/frame'+str(idx)+'.jpg'
+            file_name = '../data/images_test/frame'+str(idx)+'.jpg'
             example = {}
             example["img_path"] = file_name
             example["img_id"] = idx
@@ -103,7 +103,7 @@ class Dataset(torch.utils.data.Dataset):
 
 
 if __name__ == "__main__":
-    save_folder = "../data/images_seg"
+    save_folder = "../data/images_seg_test"
     batch_size = 2
     dataset = Dataset()
     num_batches = int(len(dataset)/batch_size)
